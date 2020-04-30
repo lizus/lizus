@@ -1,0 +1,34 @@
+{
+  "name": "lizus",
+  "version": "3.0.0",
+  "description": "lizus toolkit",
+  "main": "./src/index",
+  "scripts": {
+    "webpack": "webpack --config webpack.config.js",
+    "watch": "webpack --config webpack.config.js --watch"
+  },
+  "author": "Lizus <lizus.com@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ramda": "^0.27.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-ramda": "^2.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lizus/lizus.git"
+  },
+  "browserslist": [
+    "> 0.2%",
+    "last 4 versions",
+    "cover 99.5% in CN",
+    "not ie < 8"
+  ]
+}
