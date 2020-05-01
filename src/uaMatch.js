@@ -1,5 +1,4 @@
-import * as R from 'ramda';
-const {isEmpty,not,compose,match}=R;
+import {isEmpty,not,compose,match} from 'ramda';
 
 //获取浏览器用户代理
 //getUserAgent :: () -> string

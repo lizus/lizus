@@ -1,6 +1,5 @@
 import isMobile from './isMobile';
-import * as R from 'ramda';
-const {not}=R;
+import {not} from 'ramda';
 
 const isPc=not(isMobile);
 

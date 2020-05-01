@@ -1,6 +1,5 @@
 import trace from './trace';
-import * as R from 'ramda';
-const {is,not,compose}=R;
+import {is,not,compose} from 'ramda';
 
 const notString=compose(not,is(String));
 

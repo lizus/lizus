@@ -1,5 +1,4 @@
-import * as R from 'ramda';
-const {not,isNil,curry,compose}=R;
+import {not,isNil,curry,compose} from 'ramda';
 
 const notNil=compose(not,isNil);
 
