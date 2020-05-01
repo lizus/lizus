@@ -1,0 +1,2 @@
+
+export default JSON.stringify;

@@ -6,6 +6,7 @@ const $=jQuery;
 //url: http://lizus.com
 //插件使用:
 //需要保持幻灯所在DIV的格式如下:
+//支持的animate: leftToRight,rightToLeft,topToBottom,bottomToTop
 /*
 <div class="vitara_slide_in no-js" id="vitara_slide_homepage" data-ratio=1.5 data-max-height="500" data-animate="rightToLeft" data-speed="5000" data-event="click">
 	<div class="slide_loading"></div>
@@ -17,7 +18,7 @@ const $=jQuery;
 $.fn.extend({
 	slide:function(o){
 		o=$.extend({
-			ratio:$(this).attr('data-ratio')|| 1.5,//轮播宽高比
+			ratio:$(this).attr('data-ratio')|| 1.5,//轮播宽高比(必填)
 			maxWidth:$(this).attr('data-max-width')|| null,//轮播最大宽度
 			maxHeight:$(this).attr('data-max-height')|| null,//轮播最大高度
 			animate:$(this).attr('data-animate')|| 'leftToRight',//动画
@@ -64,9 +65,10 @@ $.fn.extend({
 
 		if (lis.length<2) return;//只有一张图的话初始化一下不启动轮播
 
+		//左右翻页按钮事件
 		btns.on(o.e,function (){
 			lis.stop(true,true);
-			var index=lis.index(lis.filter('.current'));
+			var index=get_current_eq();
 			if ($(this).hasClass('slide_prev')) {
 				index=index-1;
 				if (index<0) index=lis.length-1;
@@ -77,6 +79,7 @@ $.fn.extend({
 			}
 			goTo(index);
 		});
+		//列表翻页按钮事件
 		es.on(o.e,function (){
 			lis.stop(true,true);
 			var index=es.index($(this));
@@ -91,6 +94,7 @@ $.fn.extend({
 			_loop=setInterval(loop,o.speed);
 		});
 
+		//宽高及样式初始化执行，在窗口载入及重绘大小的时候都要进行
 		function init(){
 			w_init();
 			h_init();
@@ -217,8 +221,10 @@ $.fn.extend({
 	}
 });
 
-module.exports=function (tag){
+const slide=function (tag){
 	$(tag).each(function(){
 		$(this).slide();
 	});
 };
+
+export default slide;

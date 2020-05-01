@@ -41,11 +41,11 @@ module.exports = [
 {
   ...baseJSConfig,
   entry: {
-    web: './src/test.js'
+    test: './test.js'
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname,'dist/js')
+    path: path.resolve(__dirname,'test/js')
   },
 },
 ];
