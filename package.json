@@ -1,6 +1,6 @@
 {
   "name": "lizus",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "lizus toolkit",
   "main": "./src/index",
   "scripts": {
@@ -9,9 +9,7 @@
   },
   "author": "Lizus <lizus.com@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "ramda": "^0.27.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
@@ -19,7 +17,8 @@
     "babel-plugin-ramda": "^2.0.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.10",
+    "ramda": "^0.27.0"
   },
   "repository": {
     "type": "git",
