@@ -3,8 +3,8 @@
 ---=*--*=*-=*-=-*-=* ^.^ *---=*--*=*-=*-=-*-=* */
 //返回浏览器标识名称
 //getDevice :: () -> string
-const getDevice=function () {
-	let u=navigator.userAgent;
+var getDevice=function () {
+	var u=navigator.userAgent;
 	if (u.indexOf('MicroMessenger')!=-1) return '微信';
 	if (u.indexOf('Android')!=-1) return 'Android';
 	if (u.indexOf('iPhone')!=-1) {

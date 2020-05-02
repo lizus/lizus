@@ -5,7 +5,7 @@ import {isNil} from 'ramda';
 import setCookie from './setCookie';
 
 //清除cookie
-const delCookie=function (name) {
+var delCookie=function (name) {
   setCookie(name, "", -1);
 };
 

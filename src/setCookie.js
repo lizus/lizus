@@ -4,7 +4,7 @@ cookie相关函数
 import {isNil} from 'ramda';
 
 //设置cookie
-const setCookie=function (cname,cvalue,exdays,currentPath) {
+var setCookie=function (cname,cvalue,exdays,currentPath) {
   if (!isNil(exdays)) exdays=1;
   exdays=exdays-0;
   if(isNaN(exdays)) exdays=1;
@@ -13,9 +13,9 @@ const setCookie=function (cname,cvalue,exdays,currentPath) {
   }else{
     path='';
   }
-  let d=new Date();
+  var d=new Date();
   d.setTime(d.getTime()+(exdays*24*60*60*1000));
-  let expires="expires="+d.toUTCString();
+  var expires="expires="+d.toUTCString();
   document.cookie=cname+"="+encodeURIComponent(cvalue)+"; "+expires+path;
 };
 

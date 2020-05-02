@@ -1,6 +1,6 @@
 
-import {slide,trace} from './src/index';
+import {slide,trace} from './es/index';
 
-const traceVar=trace('变量');
+let traceVar=trace('变量');
 
 slide(traceVar('.vitara_slide_in'));

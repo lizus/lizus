@@ -1,7 +1,7 @@
-const path = require('path');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+let path = require('path');
+let UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
-const baseJSConfig={
+let baseJSConfig={
   mode:'production',
   module: {
     rules: [

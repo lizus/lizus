@@ -1,5 +1,5 @@
 
-const $=jQuery;
+var $=jQuery;
 
 //slide 幻灯插件
 //author: lizus.com@gmail.com
@@ -25,15 +25,15 @@ $.fn.extend({
 			speed:$(this).attr('data-speed')|| 5000,//轮播速度
 			e:$(this).attr('data-event')|| 'click',//用于extra是用什么事件触发，选项有hover,click
 		}, o || {});
-		let that=$(this);
-		let p=that.parent();
-		let w=0;//轮播宽
-		let h=0;//轮播高
-		let s=that.children('.vitara_slide');//真正的轮播区域
+		var that=$(this);
+		var p=that.parent();
+		var w=0;//轮播宽
+		var h=0;//轮播高
+		var s=that.children('.vitara_slide');//真正的轮播区域
 		if (s.length<1) return;
-		let ul=s.children('ul');
+		var ul=s.children('ul');
 		if (ul.length<1) return;
-		let lis=ul.children('li');
+		var lis=ul.children('li');
 		if (lis.length<1) return;
 		that.removeClass('no-js');
 		that.find('.slide_loading').hide();
@@ -100,7 +100,7 @@ $.fn.extend({
 			h_init();
 			set_w_h();
 			lis.stop(true,true);
-			let eq=get_current_eq();
+			var eq=get_current_eq();
 			switch (o.animate) {
 				case 'topToBottom':
 					ul.css({
@@ -154,7 +154,7 @@ $.fn.extend({
 		}
 
 		function extra_init(){
-			let html='<div class="extra"><ul class="ul_'+lis.length+'">';
+			var html='<div class="extra"><ul class="ul_'+lis.length+'">';
 			lis.each(function (){
 				html+='<li>'+$(this).html()+'</li>';
 			});
@@ -168,7 +168,7 @@ $.fn.extend({
 		}
 
 		function get_current_eq(){
-			let eq=lis.index(lis.filter('.current'));
+			var eq=lis.index(lis.filter('.current'));
 			if (eq<0) {
 				eq=0;
 				lis.eq(eq).addClass('current');
@@ -221,7 +221,7 @@ $.fn.extend({
 	}
 });
 
-const slide=function (tag){
+var slide=function (tag){
 	$(tag).each(function(){
 		$(this).slide();
 	});

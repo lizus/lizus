@@ -26,7 +26,7 @@ function( id ){
 借此减少函数执行次数
 示例:
 
-const scroll = require('./scroll');
+var scroll = require('./scroll');
 import {scroll} from 'lizus';
 
 (function($){
@@ -40,11 +40,11 @@ import {scroll} from 'lizus';
   $(window).on('scroll',go);
 })(jQuery);
 ---=*--*=*-=*-=-*-=* 🌹 *---=*--*=*-=*-=-*-=* */
-const scroll=function (fn) {
-  let scrolling=false;
-  let pos=0;
+var scroll=function (fn) {
+  var scrolling=false;
+  var pos=0;
   return function (e) {
-    let st=window.pageYOffset
+    var st=window.pageYOffset
     			|| document.documentElement.scrollTop
     			|| document.body.scrollTop
     			|| 0;

@@ -1,8 +1,9 @@
 {
   "name": "lizus",
-  "version": "3.0.2",
+  "version": "3.0.6",
   "description": "lizus toolkit",
-  "main": "./src/index",
+  "main": "src/index",
+  "module":"src/index.js",
   "scripts": {
     "webpack": "webpack --config webpack.config.js",
     "watch": "webpack --config webpack.config.js --watch"
@@ -25,9 +26,7 @@
     "url": "git+https://github.com/lizus/lizus.git"
   },
   "browserslist": [
-    "> 0.2%",
-    "last 4 versions",
-    "cover 99.5% in CN",
-    "not ie < 8"
-  ]
+    "last 3 versions"
+  ],
+  "sideEffects": false
 }
